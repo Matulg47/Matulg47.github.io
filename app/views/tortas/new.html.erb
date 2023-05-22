@@ -1,0 +1,65 @@
+<link rel "stylesheet" href="estilos3.css">
+<%= form_for tortas_path do |f| %>
+    <h1> <%= params[:parametro1] %> sigamos con tu pedido de tortas </h1>
+    <div>
+    <label>Marquise Frutos Rojos</label >
+    </div>
+    <label class="checkeable">
+        <input type="checkbox" name="torta[nombre]" value="Marquise Frutos Rojos" checked/>
+        <figure>
+            <%= image_tag "marquiseFR.png", title: "Marquise Frutos Rojos", class: "logo", style: "max-width:80%;width:auto;height:auto;"%>     
+            <figcaption> Brownie + dulde de leche + crema + frutos rojos
+            </figcaption> 
+        </figure>   
+    </label >
+
+    <div>
+    <label>Tamaño: </label >
+        <div>
+            <label>
+                chico 
+            </label>   
+            <input type="number" name="cantidadMFRC" min="0" max="20" placeholder="cantidad">
+        </div>
+        <div>
+            <label>
+                mediano 
+            </label>  
+            <input type="number" name="cantidadMFRM" min="0" max="20" placeholder="cantidad">
+        </div>
+        <div>
+            <label>
+                grande 
+            </label>  
+            <input type="number" name="cantidadMFRG" min="0" max="20" placeholder="cantidad">
+        </div>
+    </div>
+
+
+
+
+    <label>Marquise Oreo</label >
+    <label class="checkeable">
+        <input type="checkbox" name="torta[nombre]" value="Marquise Oreo"/>
+            <%= image_tag "tarta.png", title: "Marquise Oreo", class: "logo"%>
+    </label >
+    <input type="number" name="cantidadMO" min="0" max="20">
+
+    <label>Marquise Praline</label >
+    <label class="checkeable">
+        <input type="checkbox" name="torta[nombre]" value="Marquise Praline" />
+            <%= image_tag "macaroons.png", title: "Marquise Praline", class: "logo"%>
+    </label >
+    <input type="number" name="cantidadMP" min="0" max="20">
+
+    <label>Cheesecake de frutos rojos</label >
+    <label class="checkeable">
+        <input type="checkbox" name="torta[nombre]" value="Cheesecake de frutos rojos" />
+            <%= image_tag "desayuno.png", title: "Cheesecake de frutos rojos", class: "logo"%>
+    </label >
+    <input type="number" name="cantidadC" min="0" max="20">
+        
+
+    <input type="submit" value="Enviar" />
+    
+<% end %>

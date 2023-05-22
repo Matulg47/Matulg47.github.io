@@ -1,0 +1,20 @@
+figure{
+    display: inline-block;
+    position: relative;
+    overflow: hidden;
+}
+
+figcaption{
+    color: white;
+    transition: all 0.3s;
+    background: linear-gradient(rgba(255,255,255,0),black);
+    position: absolute;
+    left: 0px; 
+    bottom: -150px; 
+    width: 76%;
+    padding: 3%;
+    
+}
+figure:hover figcaption{
+    bottom: 0px; 
+}

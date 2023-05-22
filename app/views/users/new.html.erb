@@ -1,0 +1,10 @@
+<h1>Comencemos con tus datos</h1>
+<%= form_for(@user) do |f| %>
+    
+    <label for="user[a_nombre_de]"> Nombre </label>
+    <input type="text" id="name" name="user[a_nombre_de]" placeholder="Ingrese a nombre de quien serà el pedido" required>
+    
+    <input type="date" id="name" name="user[fecha]" placeholder="Ingrese a nombre de quien serà el pedido" required>
+   
+    <input type="submit" value="Enviar" />
+<% end %>
