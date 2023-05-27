@@ -8,7 +8,7 @@ class PedidosController < ApplicationController
 
     def show
         #mostrar datos de un pedido
-        @pedido=Pedido.find(params[:id])
+        
     end
 
     def new 

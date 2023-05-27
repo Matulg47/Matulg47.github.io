@@ -14,13 +14,17 @@ class TortasController < ApplicationController
         #mostrar formulario de carga de una torta
         @torta=Torta.new
         puts "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
-        render :new
+        
     end
 
-    # /tortas POST
+    #POST /tortas
     def create 
+        if (params[:cantidadCG]=="2") #funcionò
+            puts "CCCCCCCCCCCCCCCCCCCCCCCCCCCCCC"
+
+        end
         @torta=Torta.new()
-        puts "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+        puts "BBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBB"
 
         #(torta_params)
         #crear una torta en la BD
@@ -32,6 +36,7 @@ class TortasController < ApplicationController
             render :new #con este vuelve al formulario sin perder la informaciòn cargada
        end
     end
+    
     def edit
         #mostrar formulario de edicion de una torta
     end

@@ -6,7 +6,8 @@ Rails.application.routes.draw do
   resources :layouts
   resources :users
   resources :tortas
-  
+  resources :contactos
+  resources :stores
   root 'pedidos#index'
 
 end

@@ -4,14 +4,14 @@
 <header >
     <div class= "wrapper">
         <div class>  
-            <%= link_to '/pedidos/index', class: 'navbar-brand' do %>
+            <%= link_to '/pedidos#index', class: 'navbar-brand' do %>
                 <%= image_tag "logo.png", title: "Logo", class: "logo"%>
             <%end%>
         </div>
         <nav>
-            <a href= 'pedidos_path'> Inicio </a>
-            <a href= 'nosotros#index'> ¿Quienes somos? </a>
-            <a href= 'contactos#index'> Contacto </a>
+            <a href= '/pedidos#index'> Inicio </a>
+            <a href= '/contactos#show'> ¿Quienes somos? </a>
+            <a href= '/contactos#index'> Contacto </a>
         </nav>
     </div>
 </header>

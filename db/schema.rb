@@ -10,9 +10,17 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2023_05_20_015006) do
+ActiveRecord::Schema.define(version: 2023_05_26_195926) do
 
   create_table "homes", force: :cascade do |t|
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
+
+  create_table "line_items", force: :cascade do |t|
+    t.integer "product_id"
+    t.integer "quantity", default: 0, null: false
+    t.decimal "unit_price", precision: 10, scale: 2
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end
@@ -23,6 +31,16 @@ ActiveRecord::Schema.define(version: 2023_05_20_015006) do
     t.string "producto"
     t.string "a_nombre_de"
     t.date "fecha_de_entrega"
+  end
+
+  create_table "torta", force: :cascade do |t|
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.string "nombre"
+    t.string "descripcion"
+    t.string "tamaño"
+    t.integer "precio"
+    t.integer "pedido_id"
   end
 
   create_table "tortas", force: :cascade do |t|

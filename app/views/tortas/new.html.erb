@@ -1,65 +1,178 @@
 <link rel "stylesheet" href="estilos3.css">
-<%= form_for tortas_path do |f| %>
+<%= form_for @torta, url:tortas_path do |f| %>
     <h1> <%= params[:parametro1] %> sigamos con tu pedido de tortas </h1>
+<div class="contenedor">  
     <div>
-    <label>Marquise Frutos Rojos</label >
+        <label>Marquise Frutos Rojos</label >
     </div>
-    <label class="checkeable">
-        <input type="checkbox" name="torta[nombre]" value="Marquise Frutos Rojos" checked/>
-        <figure>
-            <%= image_tag "marquiseFR.png", title: "Marquise Frutos Rojos", class: "logo", style: "max-width:80%;width:auto;height:auto;"%>     
+    <div>
+    <figure>
+        <%= image_tag "marquiseFR.png", title: "Marquise Frutos Rojos", class: "marquiseFR", style: "width: 382.8px; height: 289.6px; margin-right: 1em;"%>     
             <figcaption> Brownie + dulde de leche + crema + frutos rojos
             </figcaption> 
-        </figure>   
-    </label >
-
-    <div>
-    <label>Tamaño: </label >
+    </figure>  
+    </div> 
+    <div class="opcion1">
         <div>
-            <label>
-                chico 
+            <label>Opciones: </label >
+        </div>
+        <div>
+            <label class="texto" > 
+                Individual(10cm de diámetro)  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
             </label>   
-            <input type="number" name="cantidadMFRC" min="0" max="20" placeholder="cantidad">
+            <label class="prueba">
+                <input type="number" name="cantidadMFRC" min="0" max="20" placeholder="cantidad"/>
+            </label>
         </div>
-        <div>
-            <label>
-                mediano 
-            </label>  
-            <input type="number" name="cantidadMFRM" min="0" max="20" placeholder="cantidad">
+    </div>
+    <div class="opcion2">
+        <label>
+            Mediana(18cm de diámetro, 6 porciones)
+        </label>  
+        <label class="prueba">
+            <input type="number" name="cantidadMFRM" min="0" max="20" placeholder="cantidad"/>
+        </label> 
+    </div>
+    <div class="opcion3">
+        <label>
+            XL(28cm de diámetro, 8porciones) &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        </label>  
+        <label class="prueba">
+            <input type="number" name="cantidadMFRG" min="0" max="20" placeholder="cantidad"/>
+        </label>
+    </div>
+</div>
+
+<div>
+</div>
+
+<div class="contenedor">
+    <div>
+        <label>Marquise Oreo</label >
+    </div>
+    <div>
+        <figure>
+            <%= image_tag "marquiseO.jpg", title: "Marquise Oreo", class: "marquiseO", style: "width: 382.8px; height: 289.6px; margin-right: 1em;"%>
+            <figcaption> Brownie + dulde de leche + crema oreo + merengue italiano
+            </figcaption> 
+        </figure>  
+    </div> 
+    <div class="opcion1">
+            <div>
+                <label>Opciones: </label >
+            </div>
+            <div>
+                <label class="texto" > 
+                    Individual(10cm de diámetro)  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                </label>   
+                <label class="prueba">
+                    <input type="number" name="cantidadMOC" min="0" max="20" placeholder="cantidad"/>
+                </label>
+            </div>
         </div>
-        <div>
+        <div class="opcion2">
             <label>
-                grande 
+                Mediana(18cm de diámetro, 6 porciones)
             </label>  
-            <input type="number" name="cantidadMFRG" min="0" max="20" placeholder="cantidad">
+            <label class="prueba">
+                <input type="number" name="cantidadMOM" min="0" max="20" placeholder="cantidad"/>
+            </label> 
+        </div>
+        <div class="opcion3">
+            <label>
+                XL(28cm de diámetro, 8porciones) &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            </label>  
+            <label class="prueba">
+                <input type="number" name="cantidadMOG" min="0" max="20" placeholder="cantidad"/>
+            </label>
         </div>
     </div>
 
+            
+    <div class="contenedor">
+    <div>
+        <label>Marquise Praline</label >
+    </div>
+    <div>
+        <figure>
+            <%= image_tag "marquisePL.png", title: "Marquise Praline", class: "marquisePL", style: "width: 382.8px; height: 289.6px; margin-right: 1em;"%>
+            <figcaption> Brownie + dulde de leche + crema con nueces caramelizadas + merengue italiano
+            </figcaption> 
+        </figure>  
+    </div> 
 
-
-
-    <label>Marquise Oreo</label >
-    <label class="checkeable">
-        <input type="checkbox" name="torta[nombre]" value="Marquise Oreo"/>
-            <%= image_tag "tarta.png", title: "Marquise Oreo", class: "logo"%>
-    </label >
-    <input type="number" name="cantidadMO" min="0" max="20">
-
-    <label>Marquise Praline</label >
-    <label class="checkeable">
-        <input type="checkbox" name="torta[nombre]" value="Marquise Praline" />
-            <%= image_tag "macaroons.png", title: "Marquise Praline", class: "logo"%>
-    </label >
-    <input type="number" name="cantidadMP" min="0" max="20">
-
-    <label>Cheesecake de frutos rojos</label >
-    <label class="checkeable">
-        <input type="checkbox" name="torta[nombre]" value="Cheesecake de frutos rojos" />
-            <%= image_tag "desayuno.png", title: "Cheesecake de frutos rojos", class: "logo"%>
-    </label >
-    <input type="number" name="cantidadC" min="0" max="20">
-        
-
-    <input type="submit" value="Enviar" />
+    <div class="opcion1">
+        <div>
+            <label>Opciones: </label >
+        </div>
+        <div>
+            <label class="texto" > 
+                Individual(10cm de diámetro)  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            </label>   
+            <label class="prueba">
+                <input type="number" name="cantidadMPLC" min="0" max="20" placeholder="cantidad"/>
+            </label>
+        </div>
+    </div>
+    <div class="opcion2">
+        <label>
+            Mediana(18cm de diámetro, 6 porciones)
+        </label>  
+        <label class="prueba">
+            <input type="number" name="cantidadPLM" min="0" max="20" placeholder="cantidad"/>
+        </label> 
+    </div>
+    <div class="opcion3">
+        <label>
+            XL(28cm de diámetro, 8porciones) &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        </label>  
+        <label class="prueba">
+            <input type="number" name="cantidadPLG" min="0" max="20" placeholder="cantidad"/>
+        </label>
+    </div>
+</div>
     
+<div class="contenedor">
+    <div>
+        <label>Cheesecake de frutos rojos</label >
+    </div>
+    <div>
+        <figure>
+            <%= image_tag "cheesecakeFR.jpg", title: "Cheesecake", class: "cheesecakeFR", style: "width: 382.8px; height: 289.6px; margin-right: 1em;"%>
+            <figcaption> falta ingredientes
+            </figcaption> 
+        </figure>  
+    </div> 
+    <div class="opcion1">
+        <div>
+            <label>Opciones: </label >
+        </div>
+        <div>
+            <label class="texto" > 
+                Individual(10cm de diámetro)  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            </label>   
+            <label class="prueba">
+                <input type="number" name="cantidadCC" min="0" max="20" placeholder="cantidad"/>
+            </label>
+        </div>
+    </div>
+    <div class="opcion2">
+        <label>
+            Mediana(18cm de diámetro, 6 porciones)
+        </label>  
+        <label class="prueba">
+            <input type="number" name="cantidadCM" min="0" max="20" placeholder="cantidad"/>
+        </label> 
+    </div>
+    <div class="opcion3">
+        <label>
+            XL(28cm de diámetro, 8porciones) &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        </label>  
+        <label class="prueba">
+            <input type="number" name="cantidadCG" min="0" max="20" default="0" placeholder="cantidad"/>
+        </label>
+    </div>
+</div>   
+
+    <%= f.submit "Crear Torta" %>
 <% end %>
