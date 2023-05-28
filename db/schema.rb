@@ -12,6 +12,9 @@
 
 ActiveRecord::Schema.define(version: 2023_05_26_195926) do
 
+  # These are extensions that must be enabled in order to support this database
+  enable_extension "plpgsql"
+
   create_table "homes", force: :cascade do |t|
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
@@ -26,37 +29,28 @@ ActiveRecord::Schema.define(version: 2023_05_26_195926) do
   end
 
   create_table "pedidos", force: :cascade do |t|
-    t.datetime "created_at", precision: 6, null: false
-    t.datetime "updated_at", precision: 6, null: false
     t.string "producto"
     t.string "a_nombre_de"
     t.date "fecha_de_entrega"
-  end
-
-  create_table "torta", force: :cascade do |t|
+    t.date "fecha_pedido"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
-    t.string "nombre"
-    t.string "descripcion"
-    t.string "tamaño"
-    t.integer "precio"
-    t.integer "pedido_id"
   end
 
   create_table "tortas", force: :cascade do |t|
-    t.datetime "created_at", precision: 6, null: false
-    t.datetime "updated_at", precision: 6, null: false
     t.string "nombre"
     t.string "descripcion"
     t.string "tamaño"
     t.integer "precio"
     t.integer "pedido_id"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
   end
 
   create_table "users", force: :cascade do |t|
+    t.string "nombre"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
-    t.string "nombre"
   end
 
 end
