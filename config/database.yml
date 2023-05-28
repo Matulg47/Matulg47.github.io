@@ -12,9 +12,9 @@ default: &default
 development:
   <<: *default
   host: <%= ENV["APP_RAILWAY_DATABASE_HOST"] %>
-  database: <%= ENV["APP_RAILWAY_DATABASE_NAME"] %>
-  username: <%= ENV["APP_RAILWAY_DATABASE_USERNAME"] %>
-  password: <%= ENV["APP_RAILWAY_DATABASE_PASSWORD"] %>
+  database: bdulahua
+  username: matu47
+  password: Manchita47
   #database: db/development.sqlite3
 
 # Warning: The database defined as "test" will be erased and
@@ -23,17 +23,17 @@ development:
 test:
   <<: *default
   host: <%= ENV["TEST_APP_RAILWAY_DATABASE_HOST"] %> 
-  database: <%= ENV["TEST_RAILWAY_DATABASE_NAME"] %>
-  username: <%= ENV["TEST_RAILWAY_DATABASE_USERNAME"] %>
-  password: <%= ENV["TEST_RAILWAY_DATABASE_PASSWORD"] %>
+  database: bdulahua
+  username: matu47
+  password: Manchita47
   #database: db/test.sqlite3
 
 production:
   <<: *default
   url: <%= ENV["DATABASE_URL"] %>
   host: <%= ENV["PGHOST"] %>
-  database: <%= ENV["PGDATABASE"] %>
-  username: <%= ENV["PGUSER"] %>
-  password: <%= ENV["PGPASSWORD"] %>
+  database: bdulahua
+  username: matu47
+  password: Manchita47
   port: <%= ENV["PGPORT"] %>
   #database: db/production.sqlite3
